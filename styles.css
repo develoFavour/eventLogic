@@ -6,6 +6,7 @@
 	--primary-white: #fcf7ff;
 	--text-color: #333;
 	--background-color: #f0f2f5;
+	--btn-background-color: white;
 	--card-background: #fff;
 	--border-color: #e5e7eb;
 	--table-header-bg: #f1f5f9;
@@ -24,6 +25,7 @@ body {
 body.dark-mode {
 	--text-color: #ffffff;
 	--background-color: #121212;
+	---btn-background-color: #121212;
 	--card-background: #1e1e1e;
 	--hover-color: #2a2a2a;
 	--table-header-bg: #2c2c2c;
@@ -56,9 +58,13 @@ body.dark-mode {
 
 .sidebar-header {
 	display: flex;
-	justify-content: space-between;
+	gap: 7px;
 	align-items: center;
 	margin-bottom: 20px;
+}
+.mobile-logo {
+	display: flex;
+	gap: 7px;
 }
 
 .nav-list {
@@ -1078,7 +1084,7 @@ body.dark-mode .next-page {
 }
 
 .btn-edit {
-	background-color: var(--background-color);
+	background-color: var(--btn-background-color);
 	color: var(--text-color);
 	border: 1px solid #e2e8f0 !important;
 	border-radius: 2px !important;
