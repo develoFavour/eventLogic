@@ -73,6 +73,28 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (notificationDot) {
 			notificationDot.style.display = isCollapsed ? "inline-block" : "none";
 		}
+
+		// Toggle visibility of collapsed icons
+		const regularIcons = sidebar.querySelectorAll(
+			".icon:not([class*='-collapsed'])"
+		);
+		const collapsedIcons = sidebar.querySelectorAll("[class*='-collapsed']");
+		regularIcons.forEach(
+			(icon) => (icon.style.display = isCollapsed ? "none" : "inline-block")
+		);
+		collapsedIcons.forEach(
+			(icon) => (icon.style.display = isCollapsed ? "inline-block" : "none")
+		);
+		const darkModeToggleLi = document.querySelector("li.toggle");
+		if (darkModeToggleLi) {
+			darkModeToggleLi.classList.toggle("toggle-none", isCollapsed);
+		}
+		const collapseIcon = sidebar.querySelector(".icon.collapse");
+		const expandIcon = sidebar.querySelector(".icon.expand-collapsed");
+		if (collapseIcon)
+			collapseIcon.style.display = isCollapsed ? "none" : "inline-block";
+		if (expandIcon)
+			expandIcon.style.display = isCollapsed ? "inline-block" : "none";
 	}
 
 	sidebarToggle.addEventListener("click", toggleSidebar);
