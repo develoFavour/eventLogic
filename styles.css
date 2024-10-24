@@ -66,6 +66,14 @@ body.dark-mode {
 	display: flex;
 	gap: 7px;
 }
+.avatar-right {
+	position: relative;
+	left: 5px;
+}
+.avatar-left {
+	position: relative;
+	right: 5px;
+}
 
 .nav-list {
 	list-style-type: none;
@@ -953,6 +961,9 @@ body.dark-mode .next-page {
 .icon.home {
 	mask-image: url("/assets/icon/home-icon.svg");
 }
+.icon.close {
+	mask-image: url("/assets/icon/close.svg");
+}
 .icon.home-collapsed {
 	mask-image: url("/assets/icon/home-icon.svg");
 }
@@ -1162,7 +1173,8 @@ body.dark-mode {
 		grid-template-columns: 1fr;
 	}
 	#eventChart {
-		width: 421px !important;
+		max-width: 100% !important;
+		height: auto !important;
 	}
 	.news-container {
 		width: 491px;
